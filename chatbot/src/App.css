@@ -1,0 +1,390 @@
+/* transisi App.css */
+.fade-enter {
+  opacity: 0;
+  transform: translateY(20px); /* Gerakan dari bawah ke atas */
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0); /* Posisi akhir */
+  transition: opacity 800ms ease-in-out, transform 600ms ease-in-out; /* Ubah menjadi 600ms */
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0); /* Posisi awal */
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-20px); /* Gerakan dari atas ke bawah */
+  transition: opacity 800ms ease-in-out, transform 600ms ease-in-out; /* Ubah menjadi 600ms */
+}
+
+/* App.css */
+nav {
+  padding: 1rem;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+nav li {
+  margin: 0 1rem;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+nav a:hover {
+  background-color: #61dafb;
+  color: black;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('C:\xrdn doc\PerSkripsian\pertemuan 2\chatbot\src\Assets\Jakarta.png');
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar .logo i {
+  margin-left: 10px;
+}
+
+.navbar .menu-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar .menu {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar .menu a.active {
+  border-bottom: 2px solid #fff;
+}
+
+/* Chat CSS*/
+.container {
+  background-color: #fff !important; /* Menggunakan !important untuk memastikan gaya diterapkan */
+  border-radius: 15px;
+  padding: 16px; /* Sesuaikan dengan theme.spacing(2) */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.paper {
+  padding: 24px; /* Sesuaikan dengan theme.spacing(3) */
+  height: 400px;
+  overflow-y: auto;
+  border-radius: 15px;
+  background-color: #b2b2b2 !important; /* Menggunakan !important untuk memastikan gaya diterapkan */
+}
+
+.user-message {
+  background-color: #e3f2fd;
+  color: #1976d2;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: right;
+  margin-left: auto;
+  display: inline; /* Mengatur agar panjang border sesuai dengan panjang teks */
+}
+
+.bot-message {
+  background-color: #f5f5f5;
+  color: #444;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: left;
+  display: inline; /* Mengatur agar panjang border sesuai dengan panjang teks */
+}
+
+.input-container {
+  display: flex; /* Menggunakan Flexbox untuk menyusun elemen dalam baris */
+  align-items: center; /* Menyelaraskan item secara vertikal di tengah */
+  margin-top: 16px; /* Jarak antara Paper dan input-container */
+}
+
+.text-field {
+  background-color: white;
+  border-radius: 10px;
+  flex: 1; /* Membuat TextField mengisi ruang yang tersedia */
+}
+
+.button {
+  margin-left: 8px; /* Jarak antara TextField dan Button */
+  background-color: #1976d2;
+  color: #fff;
+  height: 50px;
+}
+
+.button:hover {
+  background-color: #115293;
+}
+
+.text-field {
+  background-color: #b2b2b2; /* Warna latar belakang */
+  color: #000; /* Warna teks */
+  border-radius: 10px; /* Sudut yang membulat */
+}
+
+/* Mengatur warna border saat dalam fokus */
+.text-field .MuiOutlinedInput-root {
+  border-color: #1976d2; /* Warna border default */
+}
+
+.text-field .MuiOutlinedInput-root.Mui-focused {
+  border-color: #115293; /* Warna border saat dalam fokus */
+  border-radius: 10px;
+}
+
+/* Mengatur warna teks placeholder */
+.text-field .MuiInputBase-input {
+  color: #000 /* Warna teks */
+}
+
+.text-field .MuiInputBase-input::placeholder {
+  color: #000; /* Warna teks placeholder */
+}
+
+
+
+/* About CSS */
+.about-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 15px auto; /* Center the card with auto margins */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 255, 255, 0.5);
+  max-width: 80%; /* Set the card width to 80% of the container */
+}
+
+.about-card img {
+  border-radius: 20px;
+  width: 100px;
+  height: 120px;
+  margin-right: 20px;
+}
+
+.about-content {
+  max-width: 600px;
+}
+
+.about-content h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.about-content p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+.about-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-details i {
+  color: #7289da;
+}
+
+/* help css*/
+.unibot-logo {
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  left: 20px;
+}
+
+.unibot-logo i {
+  margin-left: 10px;
+}
+
+.unibot-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.unibot-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.unibot-menu a:hover {
+  text-decoration: underline;
+}
+
+.unibot-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+.unibot-text {
+    max-width: 50%;
+    margin-top: -50px;
+}
+
+.unibot-text h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.unibot-text ol {
+  list-style: decimal;
+  padding-left: 20px;
+}
+
+.unibot-text ol li {
+  margin-bottom: 10px;
+}
+
+.unibot-underline {
+  width: 600px;
+  height: 2px;
+  background: linear-gradient(to right, #ff00ff, #00ffff);
+  margin-top: 20px;
+}
+
+.unibot-image {
+    width: 483px;
+    height: 419px;
+    flex-shrink: 0;
+}
+
+.unibot-image img {
+  width: 100%;
+}
+
+/*  home css */
+/* Main Content */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  margin-top: -100px;
+}
+
+.highlight {
+  color: #8a4fff;
+}
+
+.line {
+  width: 700px;
+  height: 3px;
+  background: linear-gradient(267deg, #00F0FF 4.01%, #5200FF 57.55%, #FF2DF7 114.97%);
+  margin: 20px auto;
+  border-radius: 2px;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  color: white;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white ;
+  margin-bottom: 30px;
+}
+
+.start-chat {
+  background-color: #8a4fff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 23.298px;
+  border: 0.777px solid var(--DOML-gradient-1, #00F0FF);
+}
+
+.start-chat:hover {
+  background-color: #6c3acc;
+}
+
+/* Robot Image */
+.robot img {
+  width: 483px;
+  height: 419px;
+  flex-shrink: 0;
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.partners {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.partners img {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  width: auto; /* Adjust width as needed */
+  height: 70px; /* Maintains aspect ratio */
+  filter: brightness(1.5);
+}
+
+.partners img:hover { /* kalo di klik logo nya terang*/
+  opacity: 1;
+}
+
+footer p {
+  color: #666666;
+  font-size: 0.9rem;
+}
